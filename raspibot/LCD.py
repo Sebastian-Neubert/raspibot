@@ -97,6 +97,7 @@ class Display:
         """
         GPIO.output(self.register_select, 0)
         self._write_byte([0, 0, 0, 0, 0, 0, 0, 1])
+        sleep(0.01)
 
     def print_codepoint(self, bits):
         """Print a single character at the cursor position."""
